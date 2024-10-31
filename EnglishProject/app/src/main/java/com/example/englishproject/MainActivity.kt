@@ -1,7 +1,9 @@
 package com.example.englishproject
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -93,8 +95,14 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonRestart.setOnClickListener {
             this.deleteFile(fileNameStorage)
+            Toast.makeText(this, "Словарь удален", Toast.LENGTH_SHORT).show()
         }
 
+        //------------------переход в другое окно
+        binding.buttonOne.setOnClickListener() {
+            val intent: Intent = Intent(this@MainActivity, TwoActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
