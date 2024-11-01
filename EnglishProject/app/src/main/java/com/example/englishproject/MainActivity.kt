@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    }   //========= Конец основной функции мэин ===
+    }   //========= Конец основной функции "мэин" ===
 
     fun isFileExistsInInternalStorage(context: Context, fileName: String): Boolean {
         val file = File(context.filesDir, fileName)
