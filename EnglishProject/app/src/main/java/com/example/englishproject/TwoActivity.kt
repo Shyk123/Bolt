@@ -54,6 +54,7 @@ class TwoActivity : Activity() {
         }
 
     }
+    //-------------------------
     // --------------------Функционал--------------------------
     fun readFromInternalStorage(context: Context, fileName: String): String {
         return try {
