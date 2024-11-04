@@ -48,11 +48,31 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
+        android:id="@+id/textViewRus2"
+        android:layout_width="164dp"
+        android:layout_height="29dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="150dp"
+        android:text="Абв"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
         android:id="@+id/textViewEng"
         android:layout_width="164dp"
         android:layout_height="29dp"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="150dp"
+        android:text="Abc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewEng2"
+        android:layout_width="164dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="100dp"
         android:text="Abc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

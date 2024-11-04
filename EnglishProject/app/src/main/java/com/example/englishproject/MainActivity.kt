@@ -241,7 +241,50 @@ class MainActivity : AppCompatActivity() {
 
 
 
+}   //========= Конец основной функции "мэин" ===
 
+fun isFileExistsInInternalStorage(context: Context, fileName: String): Boolean {
+    val file = File(context.filesDir, fileName)
+    return file.exists()
+}
+
+fun createFileInInternalStorage(context: Context, fileName: String, content: String): Boolean {
+    return try {
+        context.openFileOutput(fileName, Context.MODE_PRIVATE).use { fos ->
+            fos.write(content.toByteArray())
+        }
+        true
+    } catch (e: Exception) {
+        e.printStackTrace()
+        false
+    }
+}
+
+fun readFileFromAssets(context: Context, fileName: String): String {
+    val stringBuilder = StringBuilder()
+    try {
+        val inputStream = context.assets.open(fileName)
+        val bufferedReader = BufferedReader(InputStreamReader(inputStream))
+        var line: String?
+        while (bufferedReader.readLine().also { line = it } != null) {
+            stringBuilder.append(line)
+            stringBuilder.append('\n')
+        }
+        bufferedReader.close()
+    } catch (e: Exception) {
+        e.printStackTrace()
+        return "Ошибка при чтении файла: ${e.message}"
+    }
+    return stringBuilder.toString()
+}
+
+fun readFromInternalStorage(context: Context, fileName: String): String {
+    return try {
+        context.openFileInput(fileName).bufferedReader().use { it.readText() }
+    } catch (e: Exception) {
+        ""
+    }
+}
 
 
 
