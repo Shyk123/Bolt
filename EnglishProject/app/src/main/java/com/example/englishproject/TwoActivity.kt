@@ -63,37 +63,7 @@ class TwoActivity : Activity() {
             ""
         }
     }
-    binding.buttonCheck.setOnClickListener {
-        val engWord = binding.editTextOne.toString()
-        val rusWord = binding.editTextTwo.toString()
-        var n = 0
 
-        if (n==1) {
-            Toast.makeText(this, "Найденно и верно", Toast.LENGTH_SHORT).show()
-        }
-        else {
-            Toast.makeText(this, "Нифига такого нет", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-
-    //------------------переход в другое окно
-    binding.buttonBack.setOnClickListener() {
-        // binding.textView123.text = "0000000000"
-        val intent2: Intent = Intent(this@TwoActivity, MainActivity::class.java)
-        startActivity(intent2)
-    }
-
-}
-//-------------------------
-// --------------------Функционал--------------------------
-fun readFromInternalStorage(context: Context, fileName: String): String {
-    return try {
-        context.openFileInput(fileName).bufferedReader().use { it.readText() }
-    } catch (e: Exception) {
-        ""
-    }
-}
 
 
 }

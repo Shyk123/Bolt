@@ -103,6 +103,14 @@ class MainActivity : AppCompatActivity() {
             val intent: Intent = Intent(this@MainActivity, TwoActivity::class.java)
             startActivity(intent)
         }
+
+        //------------------удаление слова
+        binding.buttonDelete.setOnClickListener() {
+            val otvet = deleteWord(contentNotes, binding.editText2.text.toString(), binding.editText1.text.toString())
+            binding.textView12.text = otvet
+        }
+
+
             //-------------------------------
 
 
@@ -236,72 +244,58 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    fun deleteWord(text: String, engWord: String, rusWord: String): String {
+        val chars = text.toCharArray()  // переводим строку в символы (получаем их в юникоде)
+        val engWord1 = engWord + "                             "
+        val rusWord1 = rusWord + "                             "
+        val charsEng = engWord1.toCharArray()
+        val charsRus = rusWord1.toCharArray()
+        var result = "Nothink"
+        var i = 0
+        var j1 = 0
+        var j2 = 0
+        var n = 0
+        var g = 0
+        while (i < chars.size) {
+            if (chars[i] == '<') {
+                n = 0
+                g = 0
+                i += 2
+                j1 = 0
+                while (chars[i] != '/') {
 
+                    if (charsEng[j1] == chars[i]) {
+                    } else {
+                        n++
+                    }
 
-
-
-
-}   //========= Конец основной функции "мэин" ===
-
-fun isFileExistsInInternalStorage(context: Context, fileName: String): Boolean {
-    val file = File(context.filesDir, fileName)
-    return file.exists()
-}
-
-fun createFileInInternalStorage(context: Context, fileName: String, content: String): Boolean {
-    return try {
-        context.openFileOutput(fileName, Context.MODE_PRIVATE).use { fos ->
-            fos.write(content.toByteArray())
+                    i++
+                    j1++
+                }
+                i++
+                j2 = 0
+                while (chars[i] != '>') {
+                    if (charsRus[j2] == chars[i]) {
+                    } else {
+                        g++
+                    }
+                    i++
+                    j2++
+                }
+                if ((g < 2) && (n < 2)) {
+                    if ((j1 == engWord.toCharArray().size) || (j1 + 1 == engWord.toCharArray().size) || (j1 - 1 == engWord.toCharArray().size)) {
+                        if ((j2 == rusWord.toCharArray().size) || (j2 + 1 == rusWord.toCharArray().size) || (j2 - 1 == rusWord.toCharArray().size)) {
+                            // если мы попадаем сюда то это значит что мы нашли слово под удаление ( не учтены различные вариации перевода )
+                            result = "Finder"
+                            return result
+                        }
+                    }
+                }
+            }
+            i++
         }
-        true
-    } catch (e: Exception) {
-        e.printStackTrace()
-        false
+        return result
     }
-}
-
-fun readFileFromAssets(context: Context, fileName: String): String {
-    val stringBuilder = StringBuilder()
-    try {
-        val inputStream = context.assets.open(fileName)
-        val bufferedReader = BufferedReader(InputStreamReader(inputStream))
-        var line: String?
-        while (bufferedReader.readLine().also { line = it } != null) {
-            stringBuilder.append(line)
-            stringBuilder.append('\n')
-        }
-        bufferedReader.close()
-    } catch (e: Exception) {
-        e.printStackTrace()
-        return "Ошибка при чтении файла: ${e.message}"
-    }
-    return stringBuilder.toString()
-}
-
-fun readFromInternalStorage(context: Context, fileName: String): String {
-    return try {
-        context.openFileInput(fileName).bufferedReader().use { it.readText() }
-    } catch (e: Exception) {
-        ""
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
