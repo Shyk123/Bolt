@@ -258,34 +258,27 @@ class MainActivity : AppCompatActivity() {
         var g = 0
         while (i < chars.size) {
             if (chars[i] == '<') {
-                n = 0
-                g = 0
-                i += 2
-                j1 = 0
+                n = 0; g = 0; i += 2; j1 = 0
                 while (chars[i] != '/') {
-
                     if (charsEng[j1] == chars[i]) {
                     } else {
                         n++
                     }
-
-                    i++
-                    j1++
+                    i++; j1++
                 }
-                i++
-                j2 = 0
+                i++; j2 = 0
                 while (chars[i] != '>') {
                     if (charsRus[j2] == chars[i]) {
                     } else {
                         g++
                     }
-                    i++
-                    j2++
+                    i++; j2++
                 }
                 if ((g < 2) && (n < 2)) {
                     if ((j1 == engWord.toCharArray().size) || (j1 + 1 == engWord.toCharArray().size) || (j1 - 1 == engWord.toCharArray().size)) {
                         if ((j2 == rusWord.toCharArray().size) || (j2 + 1 == rusWord.toCharArray().size) || (j2 - 1 == rusWord.toCharArray().size)) {
                             // если мы попадаем сюда то это значит что мы нашли слово под удаление ( не учтены различные вариации перевода )
+                            
                             result = "Finder"
                             return result
                         }

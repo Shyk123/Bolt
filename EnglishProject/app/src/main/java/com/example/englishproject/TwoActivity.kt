@@ -23,10 +23,7 @@ class TwoActivity : Activity() {
         var contentNotesOld = readFromInternalStorage(this, fileNameStorage)
         var contentNotes = contentNotesOld
 
-
-
-
-
+            //--------------------------------
 
 
 
