@@ -112,6 +112,7 @@ class MainActivity : AppCompatActivity() {
 
 
             //-------------------------------
+        //--------------------------------
 
 
 
@@ -256,6 +257,7 @@ class MainActivity : AppCompatActivity() {
         var j2 = 0
         var n = 0
         var g = 0
+        //--------------------------------
         while (i < chars.size) {
             if (chars[i] == '<') {
                 n = 0; g = 0; i += 2; j1 = 0

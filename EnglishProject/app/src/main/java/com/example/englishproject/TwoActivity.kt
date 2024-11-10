@@ -17,10 +17,11 @@ class TwoActivity : Activity() {
         //setContentView(binding.root) //------------------------для биндинг
         //setContentView(R.layout.activity_two)
         setContentView(binding.root) //------------------------для биндинг
-
+        //--------------------------------
 
         val fileNameStorage = "notes5.txt"
         var contentNotesOld = readFromInternalStorage(this, fileNameStorage)
+
         var contentNotes = contentNotesOld
 
             //--------------------------------
@@ -29,6 +30,7 @@ class TwoActivity : Activity() {
 
 
         //------------------проверяем наличие того что н-н-надо
+
         binding.buttonCheck.setOnClickListener {
             val engWord = binding.editTextOne.toString()
             val rusWord = binding.editTextTwo.toString()
@@ -42,7 +44,7 @@ class TwoActivity : Activity() {
             }
         }
 
-
+        //--------------------------------
         //------------------переход в другое окно
         binding.buttonBack.setOnClickListener() {
            // binding.textView123.text = "0000000000"
