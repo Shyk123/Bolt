@@ -34,7 +34,7 @@ class TwoActivity : Activity() {
         binding.buttonCheck.setOnClickListener {
             val engWord = binding.editTextOne.toString()
             val rusWord = binding.editTextTwo.toString()
-            var n = 0
+            var n = 9
 
             if (n==1) {
                 Toast.makeText(this, "Найденно и верно", Toast.LENGTH_SHORT).show()
@@ -57,6 +57,7 @@ class TwoActivity : Activity() {
     // --------------------Функционал--------------------------
     fun readFromInternalStorage(context: Context, fileName: String): String {
         return try {
+
             context.openFileInput(fileName).bufferedReader().use { it.readText() }
         } catch (e: Exception) {
             ""

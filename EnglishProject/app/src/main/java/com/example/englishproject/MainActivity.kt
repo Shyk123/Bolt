@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        var textVrem = ""
+        var textVrem = "78"
 
         binding.buttonPlys.setOnClickListener {
             binding.textViewRus.text = needsWords[1]
@@ -85,11 +85,13 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonMinys.setOnClickListener{
             binding.textViewRus.text = needsWords[1]
+            contentNotes = contentNotes + textVrem
             contentNotes = changeChar(contentNotes, needsWords[2].toInt(), '-')
         }
         binding.buttonDobor.setOnClickListener{
             textVrem = ("<=" + binding.editText2.text.toString() + "/" + binding.editText1.text.toString() + ">" +'\n')
             contentNotes = contentNotes + textVrem
+            textVrem = contentNotes + textVrem
             writeTextToFile(this, fileNameStorage, contentNotes)
             binding.textView12.text = contentNotes
         }

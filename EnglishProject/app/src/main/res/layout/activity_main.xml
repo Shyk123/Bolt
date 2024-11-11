@@ -40,7 +40,7 @@
     <TextView
         android:id="@+id/textViewRus"
         android:layout_width="164dp"
-        android:layout_height="29dp"
+        android:layout_height="21dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="150dp"
         android:text="Абв"
@@ -50,7 +50,7 @@
     <TextView
         android:id="@+id/textViewEng"
         android:layout_width="164dp"
-        android:layout_height="29dp"
+        android:layout_height="24dp"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="150dp"
         android:text="Abc"
@@ -60,7 +60,7 @@
     <TextView
         android:id="@+id/textView4"
         android:layout_width="184dp"
-        android:layout_height="28dp"
+        android:layout_height="27dp"
         android:layout_marginTop="28dp"
         android:text="Слово на русском"
         app:layout_constraintEnd_toEndOf="parent"
