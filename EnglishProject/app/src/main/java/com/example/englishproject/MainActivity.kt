@@ -77,7 +77,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        var textVrem = "78"
+        var textVrem = "8"
 
         binding.buttonPlys.setOnClickListener {
             binding.textViewRus.text = needsWords[1]
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
             contentNotes = changeChar(contentNotes, needsWords[2].toInt(), '-')
         }
         binding.buttonDobor.setOnClickListener{
-            textVrem = ("<=" + binding.editText2.text.toString() + "/" + binding.editText1.text.toString() + ">" +'\n')
+            textVrem = ("<" + binding.editText2.text.toString() + "/" + binding.editText1.text.toString() + ">" +'\n')
             contentNotes = contentNotes + textVrem
             textVrem = contentNotes + textVrem
             writeTextToFile(this, fileNameStorage, contentNotes)
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonRestart.setOnClickListener {
             this.deleteFile(fileNameStorage)
-            Toast.makeText(this, "Словарь удален", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Словарлен", Toast.LENGTH_SHORT).show()
         }
 
         //------------------переход в другое окно
