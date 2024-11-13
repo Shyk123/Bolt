@@ -19,7 +19,7 @@ class TwoActivity : Activity() {
         setContentView(binding.root) //------------------------для биндинг
         //--------------------------------
 
-        val fileNameStorage = "nos5.txt"
+        val fileNameStorage = "no9s5.txt"
         var contentNotesOld = readFromInternalStorage(this, fileNameStorage)
 
         var contentNotes = contentNotesOld
@@ -37,7 +37,7 @@ class TwoActivity : Activity() {
             var n = 9
 
             if (n==1) {
-                Toast.makeText(this, "На", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "На43", Toast.LENGTH_SHORT).show()
             }
             else {
                 Toast.makeText(this, "Нифигат", Toast.LENGTH_SHORT).show()
