@@ -9,7 +9,7 @@
         android:id="@+id/editTextTwo2"
         android:layout_width="166dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="17p"
         android:layout_marginBottom="115dp"
         android:ems="10"
         android:inputType="text"

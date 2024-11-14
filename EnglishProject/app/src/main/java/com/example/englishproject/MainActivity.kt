@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         binding.kolvoAll.text = flagChecks.toString()
         flagChecks = proverkaWords(contentNotes,  '+') //проверяем кол-во неверных ответов
         binding.kolvoPlysov.text = flagChecks.toString()
-        flagChecks = proverkaWords(contentNotes,  '-') //проверяем кол-во верных ответов
+        flagChecks = proverkaWords(contentNotes,  '9') //проверяем кол-во верных ответов
         binding.kolvoMinysov.text = flagChecks.toString()
         var rand = 0
         var needsWords = listOf("")
