@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.buttonLate.setOnClickListener {
             if(binding.textViewRus.text != "") {
-                rand = (0..10).random()
+                rand = (0..14).random()
                 needsWords = findWords(contentNotes, rand)
                 binding.textViewRus.text = ""
                 binding.textViewEng.text = needsWords[0]
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonRestart.setOnClickListener {
             this.deleteFile(fileNameStorage)
-            Toast.makeText(this, "Слов432арлен", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Слов42арлен", Toast.LENGTH_SHORT).show()
         }
 
         //------------------переход в другое окно
