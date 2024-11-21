@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.buttonRestart.setOnClickListener {
             this.deleteFile(fileNameStorage)
-            Toast.makeText(this, "Слов4арлен", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Слв4арлен", Toast.LENGTH_SHORT).show()
         }
 
         //------------------переход в другое окно
