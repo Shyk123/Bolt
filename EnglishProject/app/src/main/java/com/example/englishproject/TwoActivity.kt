@@ -41,7 +41,7 @@ class TwoActivity : Activity() {
                 Toast.makeText(this, "Н43", Toast.LENGTH_SHORT).show()
             }
             else {
-                Toast.makeText(this, "Ниат", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Нит", Toast.LENGTH_SHORT).show()
             }
         }
 

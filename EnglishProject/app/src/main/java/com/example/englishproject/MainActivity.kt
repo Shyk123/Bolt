@@ -253,7 +253,7 @@ class MainActivity : AppCompatActivity() {
         val rusWord1 = rusWord + "                             "
         val charsEng = engWord1.toCharArray()
         val charsRus = rusWord1.toCharArray()
-        var result = "Nothink"
+        var result = "Nohink"
         var i = 0
         var j1 = 0
         var j2 = 0
