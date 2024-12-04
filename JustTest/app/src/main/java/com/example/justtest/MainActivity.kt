@@ -87,13 +87,13 @@ class MainActivity : AppCompatActivity() {
                         contentNotesNew = ""
                         createFileInInternalStorage(this, fileNameStorage, contentNotes)
                     } else {
-                        binding.textWorld.text = "нету такого сочитания"
+                        binding.textWorld.text = "нет такого сочитания"
                     }
                 } else {
-                    binding.textWorld.text = "не ввел русское слово"
+                    binding.textWorld.text = "введи русское слово"
                 }
             } else {
-                binding.textWorld.text = "не ввел англиское слово"
+                binding.textWorld.text = "введи англиское слово"
             }
         }
 

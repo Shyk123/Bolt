@@ -6,4 +6,5 @@
 <-the_end/конец>
 <=balcon/балкон>
 <-lolita/лолище>
+<+soup/суп>
 <+size/объём>
